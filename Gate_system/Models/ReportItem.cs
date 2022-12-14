@@ -6,15 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gate_system.Models
 {
-    public enum GateFunction
+    internal class ReportItem
     {
-
-        Enter,
-        Exit,
-        EnterExit,
-        CheckIn,
-        CheckOut,
-        CheckInCheckOut
-
     }
 }

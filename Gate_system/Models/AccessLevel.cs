@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Gate_system.Models
 {
-    internal class AccessLevel
+    public enum AccessLevel
     {
+
+        SuperAdmin,
+        Admin,
+        Management,
+        ResponsobilityHigh,
+        ResponsobilityLow
+
     }
 }

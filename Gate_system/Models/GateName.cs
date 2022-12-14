@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Gate_system.Models
 {
-    internal class GateName
+    public enum GateName
     {
+
+        MainEnterance,
+        WarehouseEnterance,
+        Laborotory,
+        IT,
+        Toolshop,
+        Maintenance,
+        TrainingRoom
+        
     }
 }
