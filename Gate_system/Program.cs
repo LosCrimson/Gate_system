@@ -10,6 +10,8 @@ namespace Gate_system
     {
         static void Main(string[] args)
         {
+            var Simulation = new WorkerSimulationService();
+            Simulation.SimulationOfFebruary();
         }
     }
 }
