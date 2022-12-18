@@ -13,6 +13,7 @@ namespace Gate_system.Models
         private string firstName;
         private string lastName;
         private DateTime date;
+        private GateName gateTried;
         private Boolean wasGateEntered;
         private GateFunction whatWasDone;
 
@@ -24,16 +25,19 @@ namespace Gate_system.Models
 
         public DateTime Date { get { return date; } }
 
+        public GateName GateTried { get { return gateTried; } }
+
         public Boolean WasGateEntered { get { return wasGateEntered; } }
 
         public GateFunction WhatWasDone { get { return whatWasDone; } }
 
-        public ReportItem(int id, string firstName, string lastName, DateTime date, Boolean wasGateEntered, GateFunction whatWasDone)
+        public ReportItem(int id, string firstName, string lastName, DateTime date, GateName gateTried, Boolean wasGateEntered, GateFunction whatWasDone)
         {
             this.id = id;
             this.firstName = firstName;
             this.lastName = lastName;
             this.date = date;
+            this.gateTried = gateTried;
             this.wasGateEntered = wasGateEntered;
             this.whatWasDone = whatWasDone;
         }

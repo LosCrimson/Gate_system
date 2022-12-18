@@ -25,11 +25,10 @@ namespace Gate_system
             return GateRepository.Retrieve(i);
         }
 
-        public int RandomizeHour(int dayHour)
+        private static Random rndHour = new Random();
+        public static double RandomizeHour()
         {
-            Random rndHour = new Random();
-            dayHour = rndHour.Next(1, 481);
-            return dayHour;
+            return rndHour.NextDouble() * (481.0 - 1.0) + 1.0;
         }
     }
 }

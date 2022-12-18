@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Gate_system.Repos
 {
-    public class ReporItemRepository
+    public static class ReporItemRepository
     {
         public static List<ReportItem> reports = new List<ReportItem>();
 

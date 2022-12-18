@@ -9,7 +9,7 @@ namespace Gate_system
 {
     public class GateService
     {
-        public static Boolean entered = false;
+        private Boolean entered = false;
         public Boolean Entered { get { return entered; } private set { entered = value; } }
       
         public DateTime EnteredGate() 
@@ -18,24 +18,22 @@ namespace Gate_system
         public DateTime ExitedGate()
         { return DateTime.Now; }
 
-        public DateTime TryGate(Worker worker, Gate gate)
+        public Boolean TryGate(Worker worker, Gate gate)
         { 
             if(worker.WorkerAccessLevel == gate.AccessLevel) 
             {
                 if(entered == false)
                 {
-                    entered = true;
-                    return EnteredGate();
+                    return entered = true;
                 }
                 else
                 {
-                    entered = false;
-                    return ExitedGate();
+                    return entered = false; 
                 }
             }
             else
             {
-                return DateTime.Now;
+                return entered;
             }
         }
     }
